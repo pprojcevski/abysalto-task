@@ -8,6 +8,7 @@ class Config(BaseSettings, extra="ignore", env_file=".env"):
     app_name: str = "API"
     version: str = "0.0.1"
     cors_allowed_origins: str = "*"
+    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/abysalto"
 
 class LogConfig(BaseModel):
     """Logging configuration."""

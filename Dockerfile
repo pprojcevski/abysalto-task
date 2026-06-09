@@ -52,5 +52,7 @@ ENV PATH="/code/.venv/bin:$PATH"
 COPY --from=build /code/.venv /code/.venv
 COPY --from=build --chown=worker:worker /code /code
 
+RUN chmod +x /code/scripts/entrypoint.sh
+
 ENTRYPOINT []
 CMD ["uv", "run","fastapi", "run", "/code/app/main.py", "--port", "8080", "--host", "0.0.0.0", "--proxy-headers"]
