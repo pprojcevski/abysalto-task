@@ -137,7 +137,7 @@ requires-dist = [
     { name = "pgvector", specifier = ">=0.3.6" },
     { name = "psycopg2-binary", specifier = ">=2.9.9" },
     { name = "pydantic-settings", specifier = ">=2.9.1" },
-    { name = "sqlmodel", specifier = ">=0.0.24" },
+    { name = "sqlmodel", specifier = ">=0.0.25" },
 ]
 
 [[package]]
