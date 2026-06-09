@@ -1,7 +1,9 @@
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime
+from datetime import timezone
 
-from sqlmodel import SQLModel, Field
+from sqlmodel import Field
+from sqlmodel import SQLModel
 
 
 def _utcnow() -> datetime:
@@ -14,4 +16,3 @@ class Tenant(SQLModel, table=True):
     id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
     name: str = Field(max_length=255, nullable=False)
     created_at: datetime = Field(default_factory=_utcnow)
-

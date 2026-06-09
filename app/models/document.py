@@ -1,7 +1,9 @@
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime
+from datetime import timezone
 
-from sqlmodel import SQLModel, Field
+from sqlmodel import Field
+from sqlmodel import SQLModel
 
 
 def _utcnow() -> datetime:
@@ -18,4 +20,3 @@ class Document(SQLModel, table=True):
     mime_type: str | None = Field(default=None, max_length=100)
     status: str = Field(default="uploaded", max_length=50)
     uploaded_at: datetime = Field(default_factory=_utcnow)
-

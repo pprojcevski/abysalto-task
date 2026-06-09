@@ -1,7 +1,10 @@
 import uuid
-from datetime import datetime, date, timezone
+from datetime import date
+from datetime import datetime
+from datetime import timezone
 
-from sqlmodel import SQLModel, Field
+from sqlmodel import Field
+from sqlmodel import SQLModel
 
 
 def _utcnow() -> datetime:
@@ -19,4 +22,3 @@ class ApiKey(SQLModel, table=True):
     last_reset_date: date = Field(default_factory=date.today, nullable=False)
     active: bool = Field(default=True, nullable=False)
     created_at: datetime = Field(default_factory=_utcnow, nullable=False)
-
