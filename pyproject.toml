@@ -12,6 +12,8 @@ dependencies = [
     "pgvector>=0.3.6",
     "pydantic-settings>=2.9.1",
     "psycopg2-binary>=2.9.9",
+    "agno[pgvector,aws]>=0.1.0",
+    "boto3>=1.34.0",
 ]
 
 [tool.pytest.ini_options]

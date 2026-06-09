@@ -10,6 +10,12 @@ class Config(BaseSettings, extra="ignore", env_file=".env"):
     cors_allowed_origins: str = "*"
     database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/abysalto"
 
+    # Agno / AWS Bedrock settings
+    agno_db_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/abysalto"
+    bedrock_model_name: str = "anthropic.claude-3-5-sonnet-20241022-v2:0"
+    agno_debug_mode: bool = False
+
+
 class LogConfig(BaseModel):
     """Logging configuration."""
 
