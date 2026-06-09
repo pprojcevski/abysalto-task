@@ -47,7 +47,6 @@ def upgrade() -> None:
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column("tenant_id", sa.Uuid(), sa.ForeignKey("tenants.id"), nullable=False),
         sa.Column("filename", sa.String(500), nullable=False),
-        sa.Column("storage_path", sa.Text(), nullable=False),
         sa.Column("mime_type", sa.String(100), nullable=True),
         sa.Column("status", sa.String(50), server_default="uploaded", nullable=True),
         sa.Column(
