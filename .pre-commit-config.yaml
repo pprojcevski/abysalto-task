@@ -36,3 +36,4 @@ repos:
     rev: v3.12.0
     hooks:
       - id: reorder-python-imports
+        exclude: ^tests/integration/conftest\.py$

@@ -7,7 +7,7 @@ from sqlmodel import SQLModel
 
 
 def _utcnow() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 class Tenant(SQLModel, table=True):
